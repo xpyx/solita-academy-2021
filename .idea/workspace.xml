@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b901180-e863-48d4-80ca-e4d50a922f00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solitaExpress/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/solitaExpress/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solitaExpress/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/solitaExpress/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solitaExpress/database.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/solitaExpress/database.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solitaExpress/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/solitaExpress/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solitaExpress/routes/persons.js" beforeDir="false" afterPath="$PROJECT_DIR$/solitaExpress/routes/persons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solitaExpress/routes/users.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mwCpYItj0Z7eHKLsU09Tay86S1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b901180-e863-48d4-80ca-e4d50a922f00" name="Default Changelist" comment="" />
+      <created>1610395450474</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610395450474</updated>
+      <workItem from="1610395451688" duration="1087000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1781" y="380" width="598" height="490" key="find.popup" timestamp="1610395533934">
+      <screen x="1440" y="-83" width="2560" height="1417" />
+    </state>
+    <state x="1781" y="380" width="598" height="490" key="find.popup/0.23.1440.877/1440.-83.2560.1417@1440.-83.2560.1417" timestamp="1610395533934" />
+  </component>
+</project>

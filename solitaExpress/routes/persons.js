@@ -25,8 +25,8 @@ router.get("/:id", function (req, res) {
 
 router.put("/", function (req, res) {
     db.Person.create({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        name: req.body.name,
+        amount: req.body.amount,
         id: req.body.id
     })
         .then(person => {
