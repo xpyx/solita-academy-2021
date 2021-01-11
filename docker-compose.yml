@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+
+    postgres:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        - POSTGRES_USER=solita
+        - POSTGRES_PASSWORD=solita
+        - POSTGRES_DB=solita
