@@ -1,14 +1,14 @@
 DROP SCHEMA if exists public;
 CREATE SCHEMA solita;
-CREATE TABLE IF NOT EXISTS people(
+CREATE TABLE IF NOT EXISTS People(
     id SERIAL,
-    name TEXT,
+    name VARCHAR(255),
     amount INTEGER,
     createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updatedAt TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-INSERT INTO people(name, amount)
+INSERT INTO People(name, amount)
     VALUES
         ('Ville', 24),
         ('Anna', 6),

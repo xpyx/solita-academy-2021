@@ -10,7 +10,7 @@ const sequelize = new Sequelize(process.env.DB_SCHEMA || 'solita',
             ssl: process.env.DB_SSL == "true"
         }
     });
-const Person = sequelize.define('person', {
+const Person = sequelize.define('Person', {
     name: {
         type: Sequelize.STRING,
         allowNull: false
