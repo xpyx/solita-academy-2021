@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b901180-e863-48d4-80ca-e4d50a922f00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgres/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/postgres/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgres/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgres/init.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -63,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610395450474</updated>
-      <workItem from="1610395451688" duration="6168000" />
+      <workItem from="1610395451688" duration="7204000" />
     </task>
     <servers />
   </component>
@@ -89,9 +87,9 @@
       <screen x="1440" y="-83" width="2560" height="1417" />
     </state>
     <state x="2174" y="264" key="SettingsEditor/0.23.1440.877/1440.-83.2560.1417@1440.-83.2560.1417" timestamp="1610402547773" />
-    <state x="1781" y="380" width="598" height="548" key="find.popup" timestamp="1610397394871">
+    <state x="1781" y="380" width="598" height="548" key="find.popup" timestamp="1610403180609">
       <screen x="1440" y="-83" width="2560" height="1417" />
     </state>
-    <state x="1781" y="380" width="598" height="548" key="find.popup/0.23.1440.877/1440.-83.2560.1417@1440.-83.2560.1417" timestamp="1610397394871" />
+    <state x="1781" y="380" width="598" height="548" key="find.popup/0.23.1440.877/1440.-83.2560.1417@1440.-83.2560.1417" timestamp="1610403180609" />
   </component>
 </project>
