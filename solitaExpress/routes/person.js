@@ -1,11 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var db = require('../database');
+let express = require('express');
+let router = express.Router();
+let db = require('../database');
 
 router.get("/all", function (req, res) {
     db.Person.findAll()
-        .then(persons => {
-            res.status(200).send(JSON.stringify(persons));
+        .then(person => {
+            res.status(200).send(JSON.stringify(person));
         })
         .catch(err => {
             res.status(500).send(JSON.stringify(err));

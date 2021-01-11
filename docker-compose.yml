@@ -1,7 +1,8 @@
 version: '3.7'
 services:
     postgres:
-      image: postgres
+      build:
+        context: ./postgres
       restart: unless-stopped
       ports:
         - 5432:5432
@@ -13,7 +14,7 @@ services:
 
     solita:
       build:
-        context: .
+        context: ./solitaExpress
       environment:
         DB_SCHEMA: solita
         DB_USER: solita
