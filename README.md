@@ -7,3 +7,10 @@ Clone the repo
 In the repo root
 
 `docker-compose up --build`
+
+TODO: create .env script
+```
+set -a \
+source .env
+
+```
