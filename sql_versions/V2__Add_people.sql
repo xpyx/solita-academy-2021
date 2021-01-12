@@ -1,7 +1,7 @@
-DELETE FROM people;
+DELETE FROM person;
 
 INSERT INTO
-    people(name, amount)
+    person(name, amount)
 VALUES
     ('Ville', 24),
     ('Anna', 6),

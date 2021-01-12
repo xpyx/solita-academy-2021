@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS people(
+CREATE TABLE IF NOT EXISTS person(
     id SERIAL,
     name VARCHAR(255),
     amount INTEGER,

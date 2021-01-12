@@ -29,5 +29,19 @@ services:
     depends_on:
         - postgres
 
+  solita:
+    build:
+      context: ./solitaExpress
+    restart: unless-stopped
+    environment:
+      - DB_SCHEMA=flyway
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_HOST=postgres
+    depends_on:
+      - postgres
+    ports:
+      - '3000:3000'
+
 volumes:
   solita-db:
