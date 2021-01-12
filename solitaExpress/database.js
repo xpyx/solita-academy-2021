@@ -11,13 +11,6 @@ const sequelize = new Sequelize(process.env.DB_SCHEMA || 'postgres',
         }
     });
 
-try {
-    await sequelize.authenticate();
-    console.log('Connection has been established successfully.');
-} catch (error) {
-    console.error('Unable to connect to the database:', error);
-}
-
 const Person = sequelize.define('Person', {
     name: {
         type: Sequelize.STRING,
