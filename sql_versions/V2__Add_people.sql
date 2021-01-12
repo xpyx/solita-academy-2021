@@ -1,11 +1,3 @@
-CREATE TABLE IF NOT EXISTS people(
-    id SERIAL,
-    name VARCHAR(255),
-    amount INTEGER,
-    createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updatedAt TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
 INSERT INTO people(name, amount)
     VALUES
         ('Ville', 24),

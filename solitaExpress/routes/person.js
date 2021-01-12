@@ -1,5 +1,7 @@
 let express = require('express');
 let router = express.Router();
+
+
 let db = require('../database');
 
 router.get("/all", function (req, res) {
