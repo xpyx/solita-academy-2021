@@ -1,3 +1,8 @@
+.idea/ 
+
+#db
+solita-db/
+
 # Logs
 logs
 *.log

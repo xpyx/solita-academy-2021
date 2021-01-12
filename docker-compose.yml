@@ -1,23 +1,38 @@
 version: '3.7'
 services:
+  
     postgres:
-      build:
-        context: ./postgres
+      image: postgres:13.1-alpine
       restart: unless-stopped
       ports:
         - 5432:5432
       environment:
         POSTGRES_USER: solita
         POSTGRES_PASSWORD: solita
+        POSTGRES_DB: solita
       volumes:
-          - solita-db:/var/lib/postgresql/data
+          - ${PWD}/solita-db:/var/lib/postgresql/data
+
+    flyway:
+      image: flyway/flyway:7.5.0-alpine
+      command: "\
+        -configFiles=/flyway/conf/flyway.config \
+        -locations=filesystem:/flyway/sql \
+        -user=solita \
+        -password=solita \
+        -connectRetries=60 \
+        migrate"
+      volumes:
+        - ${PWD}/sql_versions:/flyway/sql
+        - ${PWD}/docker-flyway.config:/flyway/conf/flyway.config
+      depends_on:
+        - postgres
 
     solita:
       build:
         context: ./solitaExpress
       restart: unless-stopped
       environment:
-        DB_SCHEMA: solita
         DB_USER: solita
         DB_PASSWORD: solita
         DB_HOST: postgres
@@ -25,6 +40,5 @@ services:
         - postgres
       ports:
         - '3000:3000'
-
 volumes:
   solita-db:

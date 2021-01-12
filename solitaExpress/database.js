@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize(process.env.DB_SCHEMA || 'solita',
+const sequelize = new Sequelize(process.env.DB_SCHEMA || 'postgres',
     process.env.DB_USER || 'solita',
     process.env.DB_PASSWORD || 'solita',
     {
@@ -10,6 +10,14 @@ const sequelize = new Sequelize(process.env.DB_SCHEMA || 'solita',
             ssl: process.env.DB_SSL == "true"
         }
     });
+
+try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+} catch (error) {
+    console.error('Unable to connect to the database:', error);
+}
+
 const Person = sequelize.define('Person', {
     name: {
         type: Sequelize.STRING,
