@@ -6,7 +6,13 @@ Clone the repo
 
 In the repo root run 
 
-`mv .env.example .env`
+```
+mv .env.example .env \
+mv solitaExpress/.env.example solitaExpress/.env
+docker-compose up --build
+```
+
+`mv solitaExpress/.env.example solitaExpress/.env`
 
 `docker-compose up --build`
 
