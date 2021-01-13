@@ -6,15 +6,7 @@ Clone the repo
 
 In the repo root run 
 
-```
-mv .env.example .env \
-mv solitaExpress/.env.example solitaExpress/.env
-docker-compose up --build
-```
-
-`mv solitaExpress/.env.example solitaExpress/.env`
-
-`docker-compose up --build`
+`mv .env.example .env && mv solitaExpress/.env.example solitaExpress/.env && docker-compose up --build`
 
 This will spin up
 
@@ -22,7 +14,7 @@ This will spin up
 - Flyway migrations: my-flyway
 - Node web server: solita
 
-You can reach the web server from `localhost:3001`
+You can reach the web server from [localhost:3001](localhost:3001)
 
 TO DO:
 

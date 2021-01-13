@@ -1,3 +1,4 @@
+'use strict'
 
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
@@ -18,8 +19,6 @@ const App = () => {
     </View >
   );
 };
-
-
 
 const styles = StyleSheet.create({
   container: {

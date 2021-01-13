@@ -1,23 +1,44 @@
+'use strict'
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 const ListItem = (props) => {
+
+  const loadNextImage = async () => {
+    try {
+      axios.defaults.headers.common['x-api-key'] = process.env.api_key // Replace this with your API Key
+      let response = await axios.get('https://api.thecatapi.com/v1/images/search', {params: {limit: 1, size: "full"}}) // Ask for 1 Image, at full resolution
+      let image = response.data[0] // the response is an Array, so just use the first item as the Image
+      return image.url
+
+    } catch (err) {
+      console.log(err)
+    }
+  };
+
+  const catUrl = loadNextImage();
+
+  console.log('catUrl', catUrl);
   return (
+
     <TouchableOpacity style={styles.listItem}>
-      {/* <View style={styles.pic}>
+      <View style={styles.pic}>
         <Image
           style={styles.img}
-          source={{uri: "https://placekitten.com/200/300"}}
+          source={{uri: catUrl}}
         />
-      </View> */}
+      </View>
 
       <View style={styles.textarea}>
         <View style={styles.header}>
+          <Text style={styles.listItemText}>Name: </Text>
           <Text style={styles.listItemTextHeader}>{props.singleMedia.name}</Text>
         </View>
         <View style={styles.text}>
-          <Text style={styles.listItemText}>{props.singleMedia.amount}</Text>
+          <Text style={styles.listItemText}>Amount</Text>
+          <Text style={styles.listItemTextHeader}>{props.singleMedia.amount}</Text>
         </View>
       </View>
     </TouchableOpacity >
@@ -31,26 +52,18 @@ const styles = StyleSheet.create({
     flex: 2,
     flexDirection: 'column',
   },
-
   pic: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     paddingLeft: 15,
-
   },
-
   header: {
     flex: 1,
-
   },
-
   text: {
     flex: 1,
-
   },
-
-
   listItem: {
     zIndex: 1,
     elevation: 5,
@@ -60,7 +73,6 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: 'white',
   },
-
   listItemText: {
     padding: 10,
     fontSize: 12,
