@@ -14,7 +14,7 @@ This will spin up
 - Flyway migrations: my-flyway
 - Node web server: solita
 
-You can reach the web server from [localhost:3001](localhost:3001)
+You can reach the web server from [localhost:3001](http://localhost:3001)
 
 TO DO:
 

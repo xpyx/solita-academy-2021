@@ -29,20 +29,6 @@ const loadNextImage = async () => {
 
 };
 
-const loadNextImage = async () => {
-  try {
-    const response = await fetch(apiUrl + 'tags/avatar_641');
-    const avatarImages = await response.json();
-    if (response.ok) {
-      return avatarImages;
-    } else {
-      throw new Error(avatarImages.message);
-    }
-  } catch (e) {
-    throw new Error(e.message);
-  }
-};
-
 
 
 export {

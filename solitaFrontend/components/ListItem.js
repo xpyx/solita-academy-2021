@@ -21,8 +21,8 @@ const ListItem = (props) => {
   const catUrl = loadNextImage();
 
   console.log('catUrl', catUrl);
-  return (
 
+  return (
     <TouchableOpacity style={styles.listItem}>
       <View style={styles.pic}>
         <Image
