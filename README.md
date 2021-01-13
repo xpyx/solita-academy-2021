@@ -10,4 +10,14 @@ In the repo root run
 
 `docker-compose up --build`
 
+This will spin up
 
+- Postgres database: my-db
+- Flyway migrations: my-flyway
+- Node web server: solita
+
+You can reach the web server from `localhost:3001`
+
+TO DO:
+
+- Expo & React Native mobile app frontend
