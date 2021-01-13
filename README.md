@@ -4,13 +4,10 @@ Clone the repo
 
 `git clone https://github.com/xpyx/solita-academy-2021.git`
 
-In the repo root
+In the repo root run 
+
+`mv .env.example .env`
 
 `docker-compose up --build`
 
-TODO: create .env script
-```
-set -a \
-source .env
 
-```
