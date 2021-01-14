@@ -6,28 +6,28 @@ import axios from 'axios';
 
 const ListItem = (props) => {
 
-  const loadNextImage = async () => {
-    try {
-      axios.defaults.headers.common['x-api-key'] = process.env.api_key // Replace this with your API Key
-      let response = await axios.get('https://api.thecatapi.com/v1/images/search', {params: {limit: 1, size: "full"}}) // Ask for 1 Image, at full resolution
-      let image = response.data[0] // the response is an Array, so just use the first item as the Image
-      return image.url
+  // const loadNextImage = async () => {
+  //   try {
+  //     axios.defaults.headers.common['x-api-key'] = process.env.api_key // Replace this with your API Key
+  //     let response = await axios.get('https://api.thecatapi.com/v1/images/search', {params: {limit: 1, size: "full"}}) // Ask for 1 Image, at full resolution
+  //     let image = response.data[0] // the response is an Array, so just use the first item as the Image
+  //     return image.url
 
-    } catch (err) {
-      console.log(err)
-    }
-  };
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // };
 
-  const catUrl = loadNextImage();
+  // const catUrl = loadNextImage();
 
-  console.log('catUrl', catUrl);
+  // console.log('catUrl', catUrl);
 
   return (
     <TouchableOpacity style={styles.listItem}>
       <View style={styles.pic}>
         <Image
           style={styles.img}
-          source={{uri: catUrl}}
+          source={{uri: 'https://picsum.photos/200/300'}}
         />
       </View>
 
