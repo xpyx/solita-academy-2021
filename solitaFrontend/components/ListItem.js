@@ -40,6 +40,7 @@ const ListItem = (props) => {
           <Text style={styles.listItemText}>Amount</Text>
           <Text style={styles.listItemTextHeader}>{props.singleMedia.amount}</Text>
         </View>
+
       </View>
     </TouchableOpacity >
   )
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
   textarea: {
     paddingLeft: 10,
     flex: 2,
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
   pic: {
     flex: 1,
@@ -86,8 +87,9 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderWidth: 1,
     borderColor: 'black',
-    width: 130,
-    height: 130,
+    width: 70,
+    height: 70
+    ,
   },
 });
 

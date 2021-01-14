@@ -6,6 +6,8 @@ import Home from "../views/Home";
 import Listed from "../views/Listed";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import MyMap from "../views/MyMap";
+import Profile from "../views/Profile";
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -23,11 +25,13 @@ const TabScreen = () => {
             iconName = focused ? "list" : "list";
           } else if (route.name === "MyMap") {
             iconName = focused ? "ios-map" : "ios-map";
-          }
-          // You can return any component that you like here!
+          } else if (route.name === 'Profile') {
+            iconName = focused ? 'ios-person' : 'ios-person';
+          }// You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-      })}
+      })
+      }
       tabBarOptions={{
         activeTintColor: "#CE8764",
         inactiveTintColor: "#5E4B42",
@@ -46,7 +50,12 @@ const TabScreen = () => {
       <Tab.Screen
         name="MyMap"
         component={MyMap}
-        options={{title: "Map", headerShown: false}}
+        options={{title: "Event Map", headerShown: false}}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{title: 'Profile', headerShown: false}}
       />
     </Tab.Navigator>
   );
