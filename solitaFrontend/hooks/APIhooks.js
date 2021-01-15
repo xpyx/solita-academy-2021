@@ -1,36 +1,37 @@
-'use strict'
-
 import {useState, useEffect} from 'react';
-import {HOST_WITH_PORT} from '../environment';
-import axios from 'axios';
 
-const apiUrl = HOST_WITH_PORT + "/person";
+const apiUrl = 'http://192.168.10.33:3001/person';
 
+const useLoadMedia = () => {
+  const [personArray, setPersonArray] = useState([]);
 
+  const loadMedia = async () => {
+    try {
+      const response = await fetch(apiUrl);
+      const json = await response.json();
+      // console.log('loadMedia', media);
+      // if (all) {
+      //   console.log('all media', media);
+      setPersonArray(json);
+      console.log('Person array:', json)
 
-const loadNextImage = async () => {
+      // } else {
+      //   media = media.filter((item) => {
+      //     return item.user_id == userId;
+      //   });
+      //   setMediaArray(media);
+      // }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  useEffect(() => {
+    loadMedia();
+  }, []);
 
-  try {
-    axios.defaults.headers.common['x-api-key'] = process.env.api_key // Replace this with your API Key
-
-    let response = await axios.get('https://api.thecatapi.com/v1/images/search', {params: {limit: 1, size: "full"}}) // Ask for 1 Image, at full resolution
-
-    let image = response.data[0] // the response is an Array, so just use the first item as the Image
-
-    console.log("-- Image from TheCatAPI.com")
-    console.log("id:", image.id)
-    console.log("url:", image.url)
-
-    return image.url
-
-  } catch (err) {
-    console.log(err)
-  }
-
+  return personArray;
 };
 
-
-
 export {
-  loadNextImage,
+  useLoadMedia,
 };
