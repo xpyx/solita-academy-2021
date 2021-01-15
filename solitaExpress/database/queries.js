@@ -1,13 +1,25 @@
 const pool = require('./db')
 
+// List names and amounts, order by amount, most popular first 
 const getPersons = (request, response) => {
-    pool.query('SELECT * FROM flyway.person ORDER BY id ASC', (error, results) => {
+    pool.query('SELECT * FROM flyway.person ORDER BY amount DESC', (error, results) => {
         if (error) {
             throw error
         }
         response.status(200).json(results.rows)
     })
 }
+
+// List names in alphabetical order
+const getPersonsAlphabetically = (request, response) => {
+    pool.query('SELECT * FROM flyway.person ORDER BY name ASC', (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(200).json(results.rows)
+    })
+}
+
 
 const getPersonById = (request, response) => {
     const id = parseInt(request.params.id)
@@ -20,14 +32,14 @@ const getPersonById = (request, response) => {
     })
 }
 
-const createPerson = (request, response) => {
-    const {name, amount} = request.body
+const getPersonAmountByName = (request, response) => {
+    const {name} = request.params.name
 
-    pool.query('INSERT INTO flyway.person (name, amount) VALUES ($1, $2)', [name, amount], (error, results) => {
+    pool.query('SELECT * FROM flyway.person WHERE name = $1', [name], (error, results) => {
         if (error) {
             throw error
         }
-        response.status(201).send(`person added with ID: ${result.insertId}`)
+        response.status(200).json(results.rows)
     })
 }
 
@@ -60,8 +72,9 @@ const deletePerson = (request, response) => {
 
 module.exports = {
     getPersons,
+    getPersonsAlphabetically,
     getPersonById,
-    createPerson,
+    getPersonAmountByName,
     updatePerson,
     deletePerson,
 }

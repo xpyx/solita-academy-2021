@@ -16,9 +16,9 @@ app.get('/', (request, response) => {
     response.json({info: 'Node.js, Express, and Postgres API'})
 })
 
-app.get('/person', db.getPersons)
-app.get('/person/:id', db.getPersonById)
-app.post('/person', db.createPerson)
+app.get('/person', db.getPersons) // List names and amounts, order by amount, most popular first
+app.get('/person/name', db.getPersonsAlphabetically) // List names in alphabetical order
+app.post('/person/:name', db.getPersonAmountByName) // 
 app.put('/person/:id', db.updatePerson)
 app.delete('/person/:id', db.deletePerson)
 
