@@ -16,16 +16,6 @@ const App = () => {
   );
 };
 
-// const App = () => {
-//   return (
-//     <View style={styles.container}>
-//       <StatusBar style="light" />
-//       <Header />
-//       <List style={styles.list} />
-//     </View >
-//   );
-// };
-
 const styles = StyleSheet.create({
   container: {
     position: 'relative',
