@@ -1,4 +1,5 @@
 .idea/ 
+.expo/
 
 #db
 solita-db/
