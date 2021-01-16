@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default /^url\\(#(.+?)\\)$/;","map":{"version":3,"sources":["/Users/xpyx/Code/projects/solita-academy-2021/solitaFrontend/node_modules/react-native-svg/lib/extract/patternReg.js"],"names":[],"mappings":"AAAA,eAAe,iBAAf","sourcesContent":["export default /^url\\(#(.+?)\\)$/;\n"]},"metadata":{},"sourceType":"module"}
