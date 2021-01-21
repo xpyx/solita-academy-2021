@@ -18,14 +18,6 @@ import {
   Button,
 } from 'native-base';
 
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart
-} from "react-native-chart-kit";
 
 const screenWidth = Dimensions.get("window").width * 1.1;
 
