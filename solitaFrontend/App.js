@@ -4,12 +4,18 @@ import {StyleSheet, View} from 'react-native';
 import Navigator from './navigators/Navigator';
 import AppContext from './contexts/AppContext';
 import useLoadMedia from './hooks/APIhooks'
+import props from 'prop-types';
+
 
 const App = () => {
 
-  const personArray = useLoadMedia();
+  const [solitaPersons, setSolitaPersons] = useState({});
 
-  const [solitaPersons, setSolitaPersons] = useState({personArray});
+  // React.useEffect(() => {
+  //   const personArray = useLoadMedia();
+  //   setSolitaPersons = ({personArray});
+  // }, []);
+
 
   return (
     <AppContext.Provider value={solitaPersons}>
