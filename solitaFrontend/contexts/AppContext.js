@@ -1,5 +1,15 @@
-import React from "react";
+import React, {useState, createContext} from "react";
 
-const AppContext = React.createContext();
+// Create Context Object
+export const AppContext = createContext();
 
-export default AppContext;
+// Create a provider for components to consume and subscribe to changes
+export const AppContextProvider = props => {
+  const [solitaPersons, setSolitaPersons] = useState({});
+
+  return (
+    <AppContext.Provider value={[count, setCount]}>
+      {props.children}
+    </AppContext.Provider>
+  );
+};

@@ -1,18 +1,17 @@
 
 import {StatusBar} from "expo-status-bar";
-import React from "react";
+import React, {useContext} from 'react';
 import {StyleSheet, SafeAreaView} from "react-native";
 import List from "../components/List";
 import PropTypes from "prop-types";
 import {Button, Container, Text, View} from "native-base";
 import {useLoadMedia} from '../hooks/APIhooks';
-import AppContext from '../contexts/AppContext';
+import AppContextProvider from '../contexts/AppContext';
 
 
 const Listed = ({navigation}) => {
 
-  const personArray = useLoadMedia();
-  const myContext = useContext(AppContext);
+  const myContext = useContext(AppContextProvider);
 
   return (
     <Container>

@@ -1,27 +1,31 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, createContext} from 'react';
 import {StatusBar} from 'expo-status-bar';
 import {StyleSheet, View} from 'react-native';
 import Navigator from './navigators/Navigator';
-import AppContext from './contexts/AppContext';
+import AppContextProvider from './contexts/AppContext';
 import useLoadMedia from './hooks/APIhooks'
-import props from 'prop-types';
+import PropTypes from 'prop-types'
+
 
 
 const App = () => {
 
   const [solitaPersons, setSolitaPersons] = useState({});
 
-  // React.useEffect(() => {
-  //   const personArray = useLoadMedia();
-  //   setSolitaPersons = ({personArray});
-  // }, []);
+  React.useEffect(() => {
+    const personArray = useLoadMedia();
+    setSolitaPersons = ({personArray});
+  }, []);
 
 
   return (
-    <AppContext.Provider value={solitaPersons}>
-      {props.children}
+    // <AppContext.Provider value={solitaPersons}>
+    //   {props.children}
+    <AppContextProvider value={[solitaPersons, setSolitaPersons]}>
+      {this.props.children}
+
       <Navigator />
-    </AppContext.Provider>
+    </AppContextProvider >
 
   );
 };
@@ -38,5 +42,9 @@ const styles = StyleSheet.create({
 
   },
 });
+
+App.propTypes = {
+  children: PropTypes.any
+};
 
 export default App;

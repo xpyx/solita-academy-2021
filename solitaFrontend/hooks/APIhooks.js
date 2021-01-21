@@ -1,6 +1,4 @@
 import {useState, useEffect} from 'react';
-import AppContext from "../contexts/AppContext";
-
 
 const apiUrl = 'http://192.168.10.33:3001/person';
 
@@ -27,6 +25,6 @@ const useLoadMedia = () => {
 };
 
 
-export default {
+export {
   useLoadMedia,
 };
