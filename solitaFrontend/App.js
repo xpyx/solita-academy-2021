@@ -1,18 +1,22 @@
 import React, {useState, useEffect} from 'react';
 import {StatusBar} from 'expo-status-bar';
 import {StyleSheet, View} from 'react-native';
-import List from './components/List';
-import Header from './components/Header';
 import Navigator from './navigators/Navigator';
-import * as Expo from 'expo';
-import * as Font from 'expo-font';
-import Constants from 'expo-constants';
+import AppContext from './contexts/AppContext';
+import useLoadMedia from './hooks/APIhooks'
 
 const App = () => {
-  const [fontReady, setFontReady] = useState(false);
+
+  const personArray = useLoadMedia();
+
+  const [solitaPersons, setSolitaPersons] = useState({personArray});
 
   return (
-    <Navigator />
+    <AppContext.Provider value={solitaPersons}>
+      {props.children}
+      <Navigator />
+    </AppContext.Provider>
+
   );
 };
 

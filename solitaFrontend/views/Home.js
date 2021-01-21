@@ -3,7 +3,6 @@ import {StatusBar} from "expo-status-bar";
 import React from "react";
 import {StyleSheet, SafeAreaView, ImageBackground, View, Dimensions} from "react-native";
 import PropTypes from "prop-types";
-import {useLoadMedia} from '../hooks/APIhooks';
 
 import {
   Card,
@@ -18,13 +17,7 @@ import {
   Button,
 } from 'native-base';
 
-
-const screenWidth = Dimensions.get("window").width * 1.1;
-
 const Home = ({navigation}) => {
-
-  const personArray = useLoadMedia();
-
 
   return (
     <Container style={styles.container}>

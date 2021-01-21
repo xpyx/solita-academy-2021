@@ -12,7 +12,7 @@ const useLoadMedia = () => {
       const json = await response.json();
       console.log('loadMedia', json);
       setPersonArray(json);
-      console.log('Person array:', json)
+      console.log('Just set the person array:', json)
     } catch (e) {
       console.error(e);
     }
@@ -24,12 +24,7 @@ const useLoadMedia = () => {
   return personArray;
 };
 
-const reorderPersonArray = () => {
 
-
-
-};
-
-export {
+export default {
   useLoadMedia,
 };

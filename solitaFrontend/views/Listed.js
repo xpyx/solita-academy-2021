@@ -6,12 +6,13 @@ import List from "../components/List";
 import PropTypes from "prop-types";
 import {Button, Container, Text, View} from "native-base";
 import {useLoadMedia} from '../hooks/APIhooks';
+import AppContext from '../contexts/AppContext';
 
 
 const Listed = ({navigation}) => {
 
   const personArray = useLoadMedia();
-
+  const myContext = useContext(AppContext);
 
   return (
     <Container>
@@ -21,16 +22,24 @@ const Listed = ({navigation}) => {
         </View>
         <View style={styles.box2}>
           <Button onPress={() => {
-            navigation.navigate("Single", {file: singleMedia});
+            console.log("Nyt on järjestetty määrän mukaan, laskeva järjestys");
+            myContext.solitaPersons.sort((a, b) => {
+              return a.count > b.count;
+            })
           }}>
             <Text>Order by amount</Text>
           </Button>
-          <Button>
+          <Button onPress={() => {
+            console.log("Nyt on järjestetty aakkosjärjestyksen mukaan");
+            myContext.solitaPersons.sort((a, b) => {
+              return a.name > b.name;
+            })
+          }}>
             <Text>Alphabetical order</Text>
           </Button>
         </View>
         <View style={styles.box3}>
-          <Text>Total amount of all the names: {personArray.length}</Text>
+          <Text>Total amount of all the names: {myContext.solitaPersons.length}</Text>
         </View>
         <StatusBar style="auto" />
       </SafeAreaView>
