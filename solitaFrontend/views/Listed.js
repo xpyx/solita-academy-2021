@@ -1,6 +1,6 @@
 
 import {StatusBar} from "expo-status-bar";
-import React, {useContext} from "react";
+import React, {useContext, useState, useEffect} from "react";
 import {StyleSheet, SafeAreaView} from "react-native";
 import List from "../components/List";
 import PropTypes from "prop-types";
@@ -11,22 +11,24 @@ const Listed = ({navigation}) => {
 
   const [setting1value, setSetting1value] = useContext(AppContext);
 
-  const orderAlphabetically = () => {
-    const newArray = setting1value.sort((a, b) => {
-      return a.name > b.name;
-    })
-    setSetting1value(newArray);
-    console.log('ALPHA', setting1value);
-    console.log("Nyt on järjestetty aakkosjärjestyksen mukaan");
+  const orderAlphabeticallyAsc = () => {
+    const sorted = [...setting1value].sort((a, b) => b.name - a.name);
+    setSetting1value(sorted);
   };
 
-  const orderCountwise = () => {
-    const newArray = setting1value.sort((a, b) => {
-      return a.count > b.count;
-    })
-    setSetting1value(newArray);
-    console.log('COUNTWISE', setting1value);
-    console.log("Nyt on järjestetty määrän mukaan, laskeva järjestys");
+  const orderAlphabeticallyDesc = () => {
+    const sorted = [...setting1value].sort((a, b) => a.name - b.name);
+    setSetting1value(sorted);
+  };
+
+  const orderCountwiseAsc = () => {
+    const sorted = [...setting1value].sort((a, b) => a.amount - b.amount);
+    setSetting1value(sorted);
+  };
+
+  const orderCountwiseDesc = () => {
+    const sorted = [...setting1value].sort((a, b) => b.amount - a.amount);
+    setSetting1value(sorted);
   };
 
   return (
@@ -36,11 +38,20 @@ const Listed = ({navigation}) => {
           <List navigation={navigation}></List>
         </View>
         <View style={styles.box2}>
-          <Button onPress={() => orderCountwise()}>
-            <Text>Order by amount</Text>
+          <Button onPress={() => orderCountwiseAsc()}>
+            <Text>Order by amount, asc</Text>
           </Button>
-          <Button onPress={() => orderAlphabetically()}>
-            <Text>Alphabetical order</Text>
+          <Button onPress={() => orderAlphabeticallyAsc()}>
+            <Text>Alphabetical, asc</Text>
+          </Button>
+        </View>
+
+        <View style={styles.box2}>
+          <Button onPress={() => orderCountwiseDesc()}>
+            <Text>Order by amount, desc</Text>
+          </Button>
+          <Button onPress={() => orderAlphabeticallyDesc()}>
+            <Text>Alphabetical, desc</Text>
           </Button>
         </View>
         <View style={styles.box3}>
@@ -69,8 +80,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 20,
-    marginTop: 30,
+    paddingLeft: 15,
+    paddingRight: 15,
+    marginTop: 5
+    ,
   },
   box3: {
     backgroundColor: "transparent",
