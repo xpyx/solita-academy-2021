@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from "@react-navigation/native";
@@ -33,29 +33,29 @@ const TabScreen = () => {
       })
       }
       tabBarOptions={{
-        activeTintColor: "#CE8764",
-        inactiveTintColor: "#5E4B42",
+        activeTintColor: "red",
+        inactiveTintColor: "pink",
       }}
     >
       <Tab.Screen
         name="Home"
         component={Home}
-        options={{title: "Home", headerShown: false}}
+        options={{title: "Frontpage", headerShown: false}}
       />
       <Tab.Screen
         name="Listed"
         component={Listed}
-        options={{title: "List", headerShown: false}}
+        options={{title: "List of Solitians", headerShown: false}}
       />
       <Tab.Screen
         name="MyMap"
         component={MyMap}
-        options={{title: "Event Map", headerShown: false}}
+        options={{title: "Map for you", headerShown: false}}
       />
       <Tab.Screen
         name="Profile"
         component={Profile}
-        options={{title: 'Profile', headerShown: false}}
+        options={{title: 'My profile', headerShown: false}}
       />
     </Tab.Navigator>
   );

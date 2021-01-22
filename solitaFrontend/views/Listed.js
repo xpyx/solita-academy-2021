@@ -1,6 +1,6 @@
 
 import {StatusBar} from "expo-status-bar";
-import React, {useContext, useState, useEffect} from "react";
+import React, {useContext} from "react";
 import {StyleSheet, SafeAreaView} from "react-native";
 import List from "../components/List";
 import PropTypes from "prop-types";
@@ -12,13 +12,14 @@ const Listed = ({navigation}) => {
   const [setting1value, setSetting1value] = useContext(AppContext);
 
   const orderAlphabeticallyAsc = () => {
-    const sorted = [...setting1value].sort((a, b) => b.name - a.name);
+    const sorted = [...setting1value].sort((a, b) => a.name.localeCompare(b.name));
     setSetting1value(sorted);
   };
 
   const orderAlphabeticallyDesc = () => {
-    const sorted = [...setting1value].sort((a, b) => a.name - b.name);
+    const sorted = [...setting1value].sort((a, b) => b.name.localeCompare(a.name));
     setSetting1value(sorted);
+
   };
 
   const orderCountwiseAsc = () => {
@@ -37,27 +38,27 @@ const Listed = ({navigation}) => {
         <View style={styles.box1}>
           <List navigation={navigation}></List>
         </View>
+        <View style={styles.box3}>
+          <Text>Total amount of all the names: {setting1value.length}</Text>
+        </View>
         <View style={styles.box2}>
           <Button onPress={() => orderCountwiseAsc()}>
-            <Text>Order by amount, asc</Text>
+            <Text>Order by amount:  asc</Text>
           </Button>
           <Button onPress={() => orderAlphabeticallyAsc()}>
-            <Text>Alphabetical, asc</Text>
+            <Text>Alphabetical:  asc</Text>
           </Button>
         </View>
 
         <View style={styles.box2}>
           <Button onPress={() => orderCountwiseDesc()}>
-            <Text>Order by amount, desc</Text>
+            <Text>Order by amount: desc</Text>
           </Button>
           <Button onPress={() => orderAlphabeticallyDesc()}>
-            <Text>Alphabetical, desc</Text>
+            <Text>Alphabetical: desc</Text>
           </Button>
         </View>
-        <View style={styles.box3}>
-          <Text>Total amount of all the names: {setting1value.length}</Text>
 
-        </View>
         <StatusBar style="auto" />
       </SafeAreaView>
     </Container>
@@ -78,12 +79,10 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     paddingLeft: 15,
     paddingRight: 15,
-    marginTop: 5
-    ,
   },
   box3: {
     backgroundColor: "transparent",
@@ -91,7 +90,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    padding: 0,
+    margin: 0,
   },
 });
 
