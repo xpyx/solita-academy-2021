@@ -11,9 +11,6 @@ const List = () => {
   useLoadMedia();
   const [setting1value, setSetting1value] = useContext(AppContext);
 
-  console.log('LIST.js personList', setting1value);
-
-
   return (
     <FlatList
       data={setting1value}

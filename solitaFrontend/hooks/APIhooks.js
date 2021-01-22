@@ -14,10 +14,6 @@ const useLoadMedia = () => {
       const response = await fetch(apiUrl);
       const json = await response.json();
       setSetting1value(json);
-      // setPersonArray(json);
-      // console.log('Person array @ APIHOOKS:', personArray)
-      console.log('Person array @ APIHOOKS:', setting1value)
-
     } catch (e) {
       console.error(e);
     }

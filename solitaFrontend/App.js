@@ -11,11 +11,11 @@ import AppContext from './contexts/AppContext';
 
 const App = () => {
 
-  const [setting1value, setSetting1value] = useState([]);
+  const [solitaPersons, setSolitaPersons] = useState([]);
 
 
   return (
-    <AppContext.Provider value={[setting1value, setSetting1value]}>
+    <AppContext.Provider value={[solitaPersons, setSolitaPersons]}>
       <Navigator />
     </AppContext.Provider>
 

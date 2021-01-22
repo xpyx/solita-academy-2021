@@ -5,20 +5,29 @@ import {StyleSheet, SafeAreaView} from "react-native";
 import List from "../components/List";
 import PropTypes from "prop-types";
 import {Button, Container, Text, View} from "native-base";
-import {useLoadMedia} from '../hooks/APIhooks';
 import AppContext from "../contexts/AppContext";
-
 
 const Listed = ({navigation}) => {
 
-  // const personArray = useLoadMedia();
+  const [setting1value, setSetting1value] = useContext(AppContext);
 
-  const myContext = useContext(AppContext);
-  // const personList = myContext.setting1value
-  console.log('LIST.js personList', myContext.setting1value);
+  const orderAlphabetically = () => {
+    const newArray = setting1value.sort((a, b) => {
+      return a.name > b.name;
+    })
+    setSetting1value(newArray);
+    console.log('ALPHA', setting1value);
+    console.log("Nyt on järjestetty aakkosjärjestyksen mukaan");
+  };
 
-  // console.log('LIST.js personList', personlist);
-
+  const orderCountwise = () => {
+    const newArray = setting1value.sort((a, b) => {
+      return a.count > b.count;
+    })
+    setSetting1value(newArray);
+    console.log('COUNTWISE', setting1value);
+    console.log("Nyt on järjestetty määrän mukaan, laskeva järjestys");
+  };
 
   return (
     <Container>
@@ -27,18 +36,15 @@ const Listed = ({navigation}) => {
           <List navigation={navigation}></List>
         </View>
         <View style={styles.box2}>
-          <Button onPress={() => {
-            navigation.navigate("Single", {file: singleMedia});
-          }}>
+          <Button onPress={() => orderCountwise()}>
             <Text>Order by amount</Text>
           </Button>
-          <Button>
+          <Button onPress={() => orderAlphabetically()}>
             <Text>Alphabetical order</Text>
           </Button>
         </View>
         <View style={styles.box3}>
-          {/* <Text>Total amount of all the names: {personArray.length}</Text> */}
-          <Text>Total amount of all the names: 999</Text>
+          <Text>Total amount of all the names: {setting1value.length}</Text>
 
         </View>
         <StatusBar style="auto" />
