@@ -32,6 +32,16 @@ const Listed = ({navigation}) => {
     setSetting1value(sorted);
   };
 
+  const calcTotalAmount = () => {
+    var total = 0
+    for (let i = 0; i < setting1value.length; i++) {
+      total += setting1value[i].amount
+    }
+    return total;
+  };
+
+  const total = calcTotalAmount();
+
   return (
     <Container>
       <SafeAreaView style={styles.container}>
@@ -39,7 +49,7 @@ const Listed = ({navigation}) => {
           <List navigation={navigation}></List>
         </View>
         <View style={styles.box3}>
-          <Text>Total amount of all the names: {setting1value.length}</Text>
+          <Text>Total amount of all the names: {total}</Text>
         </View>
         <View style={styles.box2}>
           <Button onPress={() => orderCountwiseAsc()}>
