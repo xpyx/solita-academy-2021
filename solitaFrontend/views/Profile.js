@@ -10,8 +10,15 @@ import {
   Text,
 } from 'native-base';
 import {StyleSheet, Linking} from 'react-native';
+import {useLoadMedia} from '../hooks/APIhooks';
+
 
 const Profile = () => {
+
+  useLoadMedia();
+  const myContext = useContext(AppContext);
+  const personList = myContext.setting1value
+  console.log('LIST.js personList', personlist);
 
   return (
     <Container style={styles.container}>

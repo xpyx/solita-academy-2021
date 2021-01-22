@@ -1,18 +1,23 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
+import AppContext from "../contexts/AppContext";
+
 
 const apiUrl = 'http://192.168.10.33:3001/person';
 
 const useLoadMedia = () => {
 
+  const [setting1value, setSetting1value] = useContext(AppContext);
   const [personArray, setPersonArray] = useState([]);
 
   const loadMedia = async () => {
     try {
       const response = await fetch(apiUrl);
       const json = await response.json();
-      console.log('loadMedia', json);
-      setPersonArray(json);
-      console.log('Person array:', json)
+      setSetting1value(json);
+      // setPersonArray(json);
+      // console.log('Person array @ APIHOOKS:', personArray)
+      console.log('Person array @ APIHOOKS:', setting1value)
+
     } catch (e) {
       console.error(e);
     }
@@ -21,13 +26,7 @@ const useLoadMedia = () => {
     loadMedia();
   }, []);
 
-  return personArray;
-};
-
-const reorderPersonArray = () => {
-
-
-
+  // return personArray;
 };
 
 export {

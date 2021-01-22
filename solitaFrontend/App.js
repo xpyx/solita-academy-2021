@@ -7,12 +7,18 @@ import Navigator from './navigators/Navigator';
 import * as Expo from 'expo';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
+import AppContext from './contexts/AppContext';
 
 const App = () => {
-  const [fontReady, setFontReady] = useState(false);
+
+  const [setting1value, setSetting1value] = useState([]);
+
 
   return (
-    <Navigator />
+    <AppContext.Provider value={[setting1value, setSetting1value]}>
+      <Navigator />
+    </AppContext.Provider>
+
   );
 };
 
