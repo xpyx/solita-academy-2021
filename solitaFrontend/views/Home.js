@@ -3,7 +3,7 @@ import {StatusBar} from "expo-status-bar";
 import React from "react";
 import {StyleSheet, SafeAreaView, ImageBackground, View, Dimensions} from "react-native";
 import PropTypes from "prop-types";
-import {useLoadMedia} from '../hooks/APIhooks';
+import HorizontaBarChartWithYAxis from '../components/HorizontalBarChart'
 
 import {
   Card,
@@ -18,18 +18,16 @@ import {
   Button,
 } from 'native-base';
 
-
 const screenWidth = Dimensions.get("window").width * 1.1;
 
 const Home = ({navigation}) => {
-
-  const personArray = useLoadMedia();
 
 
   return (
     <Container style={styles.container}>
       <Content padder>
         <View>
+
           <Text style={styles.title}>
             Tämä on otsikko
           </Text>
@@ -39,10 +37,13 @@ const Home = ({navigation}) => {
           <Text>
             Tämän sovelluksen tarkoitus on demonstroida osaamistani.
           </Text>
-          <Text>
-            Mites toi rivinvaihto?
-          </Text>
         </View>
+
+
+        <View style={styles.pie}>
+          <HorizontaBarChartWithYAxis />
+        </View>
+
       </Content>
     </Container>
   );
@@ -56,26 +57,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  buttons: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  postCardItem: {
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
   title: {
+    flex: 1,
     padding: 20,
     margin: 20,
     fontSize: 40,
   },
   text: {
+    flex: 1,
     padding: 20,
     margin: 20,
+  },
+  pie: {
+    flex: 1,
+    padding: 20,
+    margin: 5,
   },
 
 });
