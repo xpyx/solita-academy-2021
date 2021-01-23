@@ -1,6 +1,4 @@
-# solita-academy-2021
-
-Prerequisites:
+## PREREQUISITES:
 
 - [XCode](https://developer.apple.com/xcode/) for the iOS simulator
 - [Expo](https://github.com/expo/expo-cli) for running the dev server for the frontend
@@ -25,7 +23,7 @@ Open up another window for your shell and
 
     cd solitaFrontend && expo start -c
 
-This should start a the Expo server and open a window in your browser at `http://localhost:19002/`. In this window:
+This should start the Expo server and open a window in your browser at `http://localhost:19002/`. In this window:
 - switch `CONNECTION` to `Local`
 - select `Run on iOS simulator`
 
