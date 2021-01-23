@@ -2,8 +2,10 @@
 
 Prerequisites:
 
-- [XCode](https://developer.apple.com/xcode/)
-- [Expo](https://github.com/expo/expo-cli)
+- [XCode](https://developer.apple.com/xcode/) for the iOS simulator
+- [Expo](https://github.com/expo/expo-cli) for running the dev server for the frontend
+
+## STEPS TO START THE APP:
 
 Clone the repo
 
