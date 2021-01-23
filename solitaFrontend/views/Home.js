@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   text: {
+    fontFamily: 'Lato_400Regular',
     flex: 1,
     padding: 0,
     marginLeft: 20,

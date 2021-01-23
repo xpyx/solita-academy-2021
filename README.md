@@ -13,7 +13,7 @@ In the repo root run
 
     mv .env.example .env && mv solitaExpress/.env.example solitaExpress/.env && mv solitaFrontend/.env.example solitaFrontend/.env && docker-compose up --build
 
-This will spin up
+This will set up the .env files and spin up
 
 - Postgres database: my-db
 - Flyway migrations: my-flyway
