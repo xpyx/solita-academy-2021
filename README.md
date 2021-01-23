@@ -13,9 +13,10 @@ This will spin up
 - Postgres database: my-db
 - Flyway migrations: my-flyway
 - Node web server: solita
+- Expo frontend
 
-You can reach the web server from [localhost:3001](http://localhost:3001)
+This appllication is configured to work with the XCode 11 iOS Simulator.
 
-TO DO:
-
-- Expo & React Native mobile app frontend
+1. In Expo Developer Tools http://localhost:19002/ set CONNECTION to Local
+2. Click Run on iOS simulator
+3. Profit

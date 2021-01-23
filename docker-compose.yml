@@ -29,7 +29,7 @@ services:
     depends_on:
         - postgres
 
-  solita:
+  solita-backend:
     build:
       context: ./solitaExpress
     restart: unless-stopped
@@ -42,6 +42,20 @@ services:
       - postgres
     ports:
       - '3001:3000'
+
+  solita-frontend:
+    build:
+      context: ./solitaFrontend
+    restart: unless-stopped
+    depends_on:
+      - solita-backend
+      - postgres
+    ports:
+      - '19000:19000'
+      - '19001:19001'
+      - '19002:19002'
+    environment:
+      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
 
 volumes:
   solita-db:

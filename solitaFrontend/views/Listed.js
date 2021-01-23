@@ -51,6 +51,9 @@ const Listed = ({navigation}) => {
         <View style={styles.box3}>
           <Text>Total amount of all the names: {total}</Text>
         </View>
+        <View style={styles.box3}>
+          <Text>Amount of unique names: {setting1value.length}</Text>
+        </View>
         <View style={styles.box2}>
           <Button onPress={() => orderCountwiseAsc()}>
             <Text>Order by amount:  asc</Text>
