@@ -11,7 +11,7 @@ Clone the repo
 
 In the repo root run 
 
-`mv .env.example .env && mv solitaExpress/.env.example solitaExpress/.env && docker-compose up --build`
+```mv .env.example .env && mv solitaExpress/.env.example solitaExpress/.env && mv solitaFrontend/.env.example solitaFrontend/.env docker-compose up --build```
 
 This will spin up
 
@@ -21,8 +21,7 @@ This will spin up
 
 Open up another window for your shell and
 
-`cd solitaFrontend`
-`expo start -c`
+`cd solitaFrontend && expo start -c`
 
 This should start a the Expo server and open a window in your browser at `http://localhost:19002/`. In this window:
 - switch `PRODUCTION MODE` on
