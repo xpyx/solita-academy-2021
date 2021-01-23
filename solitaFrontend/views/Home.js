@@ -29,19 +29,21 @@ const Home = ({navigation}) => {
         <View>
 
           <Text style={styles.title}>
-            Tämä on otsikko
+            Solita Dev Academy application
           </Text>
         </View>
 
         <View style={styles.text}>
           <Text>
-            Tämän sovelluksen tarkoitus on demonstroida osaamistani.
+            This application a demostration of my skills. It´s done in a limited timeframe, so it isn't perfect.
           </Text>
         </View>
 
+        <View style={styles.text}>
+          <Text>
+            - Home: this page
 
-        <View style={styles.pie}>
-          <HorizontaBarChartWithYAxis />
+</Text>
         </View>
 
       </Content>

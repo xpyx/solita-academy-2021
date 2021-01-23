@@ -1,5 +1,10 @@
 # solita-academy-2021
 
+Prerequisites:
+
+- XCode 11
+- [Expo](https://github.com/expo/expo-cli)
+
 Clone the repo
 
 `git clone https://github.com/xpyx/solita-academy-2021.git`
@@ -13,10 +18,8 @@ This will spin up
 - Postgres database: my-db
 - Flyway migrations: my-flyway
 - Node web server: solita
-- Expo frontend
 
-This appllication is configured to work with the XCode 11 iOS Simulator.
 
-1. In Expo Developer Tools http://localhost:19002/ set CONNECTION to Local
-2. Click Run on iOS simulator
-3. Profit
+
+
+This application is best viewed with the XCode 11 iOS Simulator.

@@ -34,10 +34,26 @@ const Profile = () => {
         </Card>
         <Card>
           <CardItem>
-            <Text>Check out my site: </Text>
+            <Text>
+              I recently came up with the conclusion that I can code. For four years I have studied rigorously and finally can set aside my impostor syndrome. I have developed an appetite for learning new tricks everyday. For now I now a bit about everything, but haven't had the chance to deepen my skills. I'm still looking for the field I want to concentrate in.
+              I'm passionate about security and privacy. I'd like to be able to develop services that help people and help Earth to stay habitable. If it pays well, I'm not gonna be unhappy about it.
+            </Text>
+
+          </CardItem>
+        </Card>
+        <Card>
+          <CardItem>
+            <Text>My professional site and blog: </Text>
             <Text style={{color: 'blue'}}
               onPress={() => Linking.openURL('http://www.xpyx.fi')}>
               www.xpyx.fi
+              </Text>
+          </CardItem>
+          <CardItem>
+            <Text>My Github: </Text>
+            <Text style={{color: 'blue'}}
+              onPress={() => Linking.openURL('http://www.github.com/xpyx')}>
+              www.github.com/xpyx
               </Text>
           </CardItem>
         </Card>
