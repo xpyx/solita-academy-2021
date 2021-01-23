@@ -1,14 +1,16 @@
 
-import {StatusBar} from "expo-status-bar";
 import React from "react";
-import {StyleSheet, SafeAreaView, View, Dimensions, Image} from "react-native";
+import {StyleSheet, View, Dimensions, Image} from "react-native";
 import PropTypes from "prop-types";
+import PieChartWithCenteredLabels from '../components/PieChart'
 
 import {
   Card,
   CardItem,
   Container,
   Content,
+  Left,
+  Right,
   Text,
 } from 'native-base';
 
@@ -20,9 +22,9 @@ const Home = ({navigation}) => {
   return (
     <Container style={styles.container}>
       <Content padder>
-
+        {/*
         <Image source={{uri: 'https://www.siqni.fi/wp-content/uploads/2018/03/solita.png'}}
-          style={{width: 40, height: 40}} />
+          style={{width: 40, height: 40}} /> */}
         <Card>
           <View>
             <Text style={styles.title}>
@@ -67,9 +69,32 @@ const Home = ({navigation}) => {
             </View>
           </CardItem>
         </Card>
+        <Card>
+          <Text style={styles.pieTitle}>According to Github, the codebase of this application contains:</Text>
+          <View style={styles.pieContainer}>
+            <View style={styles.pie}>
+              <PieChartWithCenteredLabels />
+            </View>
 
+            <View style={styles.pieTextContainer}>
+              <View style={styles.pieText}>
+                <Text>Javascript 96.5%</Text>
+              </View>
+
+              <View style={styles.pieText}>
+                <Text>Shell 1.6%</Text>
+              </View>
+
+              <View style={styles.pieText}>
+                <Text>Dockerfile 1.9%</Text>
+              </View>
+
+            </View>
+          </View>
+        </Card>
+        <View >
+        </View>
       </Content>
-
     </Container>
   );
 };
@@ -85,8 +110,8 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     padding: 20,
-    margin: 20,
-    fontSize: 40,
+    marginLeft: 20,
+    fontSize: 30,
   },
   text: {
     flex: 1,
@@ -95,8 +120,29 @@ const styles = StyleSheet.create({
   },
   pie: {
     flex: 1,
-    padding: 20,
-    margin: 5,
+    padding: 10,
+    marginLeft: 10,
+  },
+  pieText: {
+    flex: 1,
+    padding: 0,
+    marginTop: 20,
+  },
+  pieTitle: {
+    flex: 1,
+    padding: 10,
+    marginLeft: 20,
+  },
+  pieContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    padding: 10,
+
+  },
+  pieTextContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    padding: 10,
   },
 
 });

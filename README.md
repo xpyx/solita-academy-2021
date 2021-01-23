@@ -7,7 +7,7 @@ Prerequisites:
 
 Clone the repo
 
-`git clone https://github.com/xpyx/solita-academy-2021.git`
+    git clone https://github.com/xpyx/solita-academy-2021.git
 
 In the repo root run 
 
@@ -21,7 +21,7 @@ This will spin up
 
 Open up another window for your shell and
 
-`cd solitaFrontend && expo start -c`
+    cd solitaFrontend && expo start -c
 
 This should start a the Expo server and open a window in your browser at `http://localhost:19002/`. In this window:
 - switch `CONNECTION` to `Local`
