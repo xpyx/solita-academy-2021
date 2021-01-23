@@ -2,7 +2,7 @@
 
 Prerequisites:
 
-- XCode 11
+- [XCode](https://developer.apple.com/xcode/)
 - [Expo](https://github.com/expo/expo-cli)
 
 Clone the repo
@@ -17,9 +17,20 @@ This will spin up
 
 - Postgres database: my-db
 - Flyway migrations: my-flyway
-- Node web server: solita
+- Node Express web server: solita-backend
 
+Open up another window for your shell and
 
+`cd solitaFrontend`
+`expo start -c`
 
+This should start a the Expo server and open a window in your browser at `http://localhost:19002/`. In this window:
+- switch `PRODUCTION MODE` on
+- switch `CONNECTION` to `Local`
+- select `Run on iOS simulator`
 
-This application is best viewed with the XCode 11 iOS Simulator.
+This will start the iOS simulator and you can use the application.
+
+This application is tested with the XCode 11 iOS Simulator.
+
+TODO: Link to youtube video of the application in action.

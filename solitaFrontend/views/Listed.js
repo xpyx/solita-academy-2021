@@ -4,7 +4,7 @@ import React, {useContext} from "react";
 import {StyleSheet, SafeAreaView} from "react-native";
 import List from "../components/List";
 import PropTypes from "prop-types";
-import {Button, Container, Text, View, Card, CardItem} from "native-base";
+import {Button, Container, Text, View} from "native-base";
 import AppContext from "../contexts/AppContext";
 
 const Listed = ({navigation}) => {

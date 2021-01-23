@@ -50,7 +50,7 @@ const TabScreen = () => {
       <Tab.Screen
         name="MyMap"
         component={MyMap}
-        options={{title: "Map for you", headerShown: false}}
+        options={{title: "Map", headerShown: false}}
       />
       <Tab.Screen
         name="Profile"
