@@ -41,6 +41,8 @@ This will start the iOS simulator and you can use the application.
 
 This application is tested with the XCode 11 iOS Simulator.
 
+Here is a screen capture video of the whole process.
+
 [![How to start this application](https://img.youtube.com/vi/qkDK1kZ4PvY/0.jpg)](https://www.youtube.com/watch?v=qkDK1kZ4PvY
  "Solita Dev Academy 2021 programming assignment")
 
