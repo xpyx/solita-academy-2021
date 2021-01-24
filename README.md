@@ -41,7 +41,7 @@ This will start the iOS simulator and you can use the application.
 
 This application is tested with the XCode 11 iOS Simulator.
 
-[![How to start this application](http://img.youtube.com/vi/qkDK1kZ4PvY/0.jpg)](https://www.youtube.com/watch?v=qkDK1kZ4PvY
+[![How to start this application](https://img.youtube.com/vi/qkDK1kZ4PvY/0.jpg)](https://www.youtube.com/watch?v=qkDK1kZ4PvY
  "Solita Dev Academy 2021 programming assignment")
 
 PS. I tried to get the frontend run with the docker-compose, but unfortunately there is a [flaw](https://github.com/expo/expo-cli/issues/866) in Expo at the moment and because of that I couldn't find the solution for this.
