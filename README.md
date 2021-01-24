@@ -15,7 +15,7 @@ In the repo root run
 
     mv .env.example .env && mv solitaExpress/.env.example solitaExpress/.env && docker-compose up --build
 
-This will set up the .env files and spin up
+This will set up the .env files and spin up the following services:
 
 - Postgres database: my-db
 - Flyway migrations: my-flyway
@@ -23,7 +23,7 @@ This will set up the .env files and spin up
 
 When you see `my-flyway exited with code 0` all services are functional. Be patient, it might take a while :)
 
-Open up another window for your shell and cd to the frontend directory of the repository.
+Open up another window for your shell and cd to the solitaFrontend directory.
 
     cd solitaFrontend
     

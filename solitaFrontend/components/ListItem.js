@@ -5,31 +5,12 @@ import PropTypes from 'prop-types';
 
 const ListItem = (props) => {
 
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-  }
-
-  const getRandomCat = () => {
-
-    var url = 'http://placekitten.com/1000/'
-    var min = 1;
-    var max = 2000;
-    var rand = getRandomInt(min, max)
-    var catUrl = url + rand.toString()
-    console.log(catUrl);
-    return catUrl;
-  };
-
-  const randomCat = getRandomCat();
-
   return (
     <TouchableOpacity style={styles.listItem}>
       <View style={styles.pic}>
         <Image
           style={styles.img}
-          source={{uri: randomCat}}
+          source={{uri: props.singlePerson.cat_url}}
         />
       </View>
 

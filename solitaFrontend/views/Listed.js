@@ -19,7 +19,6 @@ const Listed = ({navigation}) => {
   const orderAlphabeticallyDesc = () => {
     const sorted = [...personArray].sort((a, b) => b.name.localeCompare(a.name));
     setPersonArray(sorted);
-
   };
 
   const orderCountwiseAsc = () => {
@@ -49,10 +48,7 @@ const Listed = ({navigation}) => {
           <List navigation={navigation}></List>
         </View>
         <View style={styles.textBox}>
-          <Text>Total amount of all the names: {total}</Text>
-        </View>
-        <View style={styles.textBox}>
-          <Text>Amount of unique names: {personArray.length}</Text>
+          <Text>Names total: {total} | unique: {personArray.length}</Text>
         </View>
         <View style={styles.buttonBox}>
           <Button onPress={() => orderCountwiseAsc()}>

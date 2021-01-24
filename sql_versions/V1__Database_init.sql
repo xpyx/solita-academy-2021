@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS person(
     id SERIAL,
     name VARCHAR(255),
     amount INTEGER,
+    cat_url VARCHAR(255),
     createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updatedAt TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
