@@ -3,9 +3,6 @@ import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import PropTypes from 'prop-types';
 
-
-
-
 const ListItem = (props) => {
 
   return (

@@ -7,5 +7,5 @@ COPY . .
 RUN chown -R app:app /opt/app
 USER app
 RUN npm install
-EXPOSE 19000 19002
-CMD [ "expo", "start", "-c" ]
+EXPOSE 19000 19001 19002
+CMD [ "expo", "start" ]

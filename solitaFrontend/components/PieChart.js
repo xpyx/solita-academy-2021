@@ -1,6 +1,5 @@
 import React from 'react'
 import {PieChart} from 'react-native-svg-charts'
-import {Text} from 'react-native-svg'
 
 class PieChartWithCenteredLabels extends React.PureComponent {
 

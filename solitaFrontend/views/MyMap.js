@@ -1,8 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable indent */
-/* eslint-disable comma-dangle */
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react';
 import MapView from 'react-native-maps';
 import PropTypes from 'prop-types';
