@@ -2,9 +2,10 @@
 
 - [XCode](https://developer.apple.com/xcode/) for the iOS simulator
 - [Expo](https://github.com/expo/expo-cli) for running the Expo server for the frontend
-- Mobile device and the device running the server MUST be in the same network
 
 ## STEPS TO START THE APP:
+
+Note: these instructions are for starting the app in the iOS simulator.
 
 Clone the repo
 
