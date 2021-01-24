@@ -13,7 +13,7 @@ Clone the repo
 
 In the repo root run 
 
-    mv .env.example .env && mv solitaExpress/.env.example solitaExpress/.env && mv solitaFrontend/.env.example solitaFrontend/.env && docker-compose up --build
+    mv .env.example .env && mv solitaExpress/.env.example solitaExpress/.env && docker-compose up --build
 
 This will set up the .env files and spin up
 
@@ -27,7 +27,7 @@ Open up another window for your shell and cd to the frontend directory of the re
 
     cd solitaFrontend
     
-If you don't have expo-cli installed, now would be a perfect time to do that
+If you don't have expo-cli installed, now would be the perfect time to do it
 
     npm i expo-cli
 
