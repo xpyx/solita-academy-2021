@@ -1,6 +1,6 @@
 
 import React from "react";
-import {StyleSheet, View, Dimensions, Image} from "react-native";
+import {StyleSheet, View} from "react-native";
 import PropTypes from "prop-types";
 import PieChartWithCenteredLabels from '../components/PieChart'
 
@@ -9,22 +9,14 @@ import {
   CardItem,
   Container,
   Content,
-  Left,
-  Right,
   Text,
 } from 'native-base';
 
-const screenWidth = Dimensions.get("window").width * 1.1;
-
 const Home = ({navigation}) => {
-
 
   return (
     <Container style={styles.container}>
       <Content padder>
-        {/*
-        <Image source={{uri: 'https://www.siqni.fi/wp-content/uploads/2018/03/solita.png'}}
-          style={{width: 40, height: 40}} /> */}
         <Card>
           <View>
             <Text style={styles.title}>

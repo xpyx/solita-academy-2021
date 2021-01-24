@@ -44,7 +44,7 @@ const Profile = () => {
             <Text>
               I recently came up with the conclusion that I can code. For five years I have studied rigorously and finally
               can set aside my impostor syndrome. I have developed an appetite for learning new tricks everyday. At the moment
-              I know a bit about everything, but haven't had the chance to deepen my skills. I'm still looking for the field I
+              I know a bit about everything, but haven't had the chance to deepen my skills yet. I'm still looking for the field I
               want to concentrate in.
             </Text>
           </CardItem>
