@@ -1,19 +1,16 @@
-'use strict'
-
 import React, {useContext} from 'react';
 import {FlatList} from 'react-native';
 import ListItem from './ListItem';
-import {useLoadMedia} from '../hooks/APIhooks';
+import {useLoadPersons} from '../hooks/APIhooks';
 import AppContext from "../contexts/AppContext";
 
 const List = () => {
-  // const personArray = useLoadMedia();
-  useLoadMedia();
-  const [setting1value, setSetting1value] = useContext(AppContext);
+  useLoadPersons();
+  const [personArray, setPersonArray] = useContext(AppContext);
 
   return (
     <FlatList
-      data={setting1value}
+      data={personArray}
       keyExtractor={(item, index) => index.toString()}
       renderItem={({item}) => <ListItem singlePerson={item} />}
     />

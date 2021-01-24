@@ -74,11 +74,11 @@ const Home = ({navigation}) => {
               </View>
 
               <View>
-                <Text style={styles.pieText}>Shell 1.6%</Text>
+                <Text style={styles.pieText}>Shell 1.5%</Text>
               </View>
 
               <View >
-                <Text style={styles.pieText}>Dockerfile 1.9%</Text>
+                <Text style={styles.pieText}>Dockerfile 2%</Text>
               </View>
 
             </View>

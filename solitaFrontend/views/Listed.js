@@ -9,33 +9,33 @@ import AppContext from "../contexts/AppContext";
 
 const Listed = ({navigation}) => {
 
-  const [setting1value, setSetting1value] = useContext(AppContext);
+  const [personArray, setPersonArray] = useContext(AppContext);
 
   const orderAlphabeticallyAsc = () => {
-    const sorted = [...setting1value].sort((a, b) => a.name.localeCompare(b.name));
-    setSetting1value(sorted);
+    const sorted = [...personArray].sort((a, b) => a.name.localeCompare(b.name));
+    setPersonArray(sorted);
   };
 
   const orderAlphabeticallyDesc = () => {
-    const sorted = [...setting1value].sort((a, b) => b.name.localeCompare(a.name));
-    setSetting1value(sorted);
+    const sorted = [...personArray].sort((a, b) => b.name.localeCompare(a.name));
+    setPersonArray(sorted);
 
   };
 
   const orderCountwiseAsc = () => {
-    const sorted = [...setting1value].sort((a, b) => a.amount - b.amount);
-    setSetting1value(sorted);
+    const sorted = [...personArray].sort((a, b) => a.amount - b.amount);
+    setPersonArray(sorted);
   };
 
   const orderCountwiseDesc = () => {
-    const sorted = [...setting1value].sort((a, b) => b.amount - a.amount);
-    setSetting1value(sorted);
+    const sorted = [...personArray].sort((a, b) => b.amount - a.amount);
+    setPersonArray(sorted);
   };
 
   const calcTotalAmount = () => {
     var total = 0
-    for (let i = 0; i < setting1value.length; i++) {
-      total += setting1value[i].amount
+    for (let i = 0; i < personArray.length; i++) {
+      total += personArray[i].amount
     }
     return total;
   };
@@ -52,7 +52,7 @@ const Listed = ({navigation}) => {
           <Text>Total amount of all the names: {total}</Text>
         </View>
         <View style={styles.textBox}>
-          <Text>Amount of unique names: {setting1value.length}</Text>
+          <Text>Amount of unique names: {personArray.length}</Text>
         </View>
         <View style={styles.buttonBox}>
           <Button onPress={() => orderCountwiseAsc()}>
