@@ -19,34 +19,12 @@ const App = () => {
 
   const [solitaPersons, setSolitaPersons] = useState([]);
 
+  return (
+    <AppContext.Provider value={[solitaPersons, setSolitaPersons]}>
+      <Navigator />
+    </AppContext.Provider>
 
-  let [fontsLoaded] = useFonts({
-    Lato_400Regular,
-  });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  } else {
-    return (
-      <AppContext.Provider value={[solitaPersons, setSolitaPersons]}>
-        <Navigator />
-      </AppContext.Provider>
-
-    );
-  }
+  );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    position: 'relative',
-    flex: 1,
-    flexDirection: 'column',
-  },
-  list: {
-
-    flex: 2,
-
-  },
-});
 
 export default App;

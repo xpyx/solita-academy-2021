@@ -34,36 +34,36 @@ const Home = ({navigation}) => {
         </Card>
         <Card>
           <CardItem>
-            <View style={styles.text}>
-              <Text>
+            <View>
+              <Text style={styles.text}>
                 This application is a demostration of my coding skills. The content is:
           </Text>
             </View>
           </CardItem>
           <CardItem>
-            <View style={styles.text}>
-              <Text>
+            <View>
+              <Text style={styles.text}>
                 - Frontpage: this page
           </Text>
             </View>
           </CardItem>
           <CardItem>
-            <View style={styles.text}>
-              <Text>
+            <View>
+              <Text style={styles.text}>
                 - List of Solitians: shows a list of people with buttons to sort the list in different ways
           </Text>
             </View>
           </CardItem>
           <CardItem>
-            <View style={styles.text}>
-              <Text>
+            <View>
+              <Text style={styles.text}>
                 - Map: a map that shows your location for no reason
           </Text>
             </View>
           </CardItem>
           <CardItem>
-            <View style={styles.text}>
-              <Text>
+            <View>
+              <Text style={styles.text}>
                 - My profile: my details and some links
           </Text>
             </View>
@@ -77,16 +77,16 @@ const Home = ({navigation}) => {
             </View>
 
             <View style={styles.pieTextContainer}>
-              <View style={styles.pieText}>
-                <Text>Javascript 96.5%</Text>
+              <View>
+                <Text style={styles.pieText}>Javascript 96.5%</Text>
               </View>
 
-              <View style={styles.pieText}>
-                <Text>Shell 1.6%</Text>
+              <View>
+                <Text style={styles.pieText}>Shell 1.6%</Text>
               </View>
 
-              <View style={styles.pieText}>
-                <Text>Dockerfile 1.9%</Text>
+              <View >
+                <Text style={styles.pieText}>Dockerfile 1.9%</Text>
               </View>
 
             </View>
@@ -111,7 +111,8 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     marginLeft: 20,
-    fontSize: 30,
+    fontSize: 35,
+    textAlign: 'center',
   },
   text: {
     fontFamily: 'Lato_400Regular',
@@ -133,17 +134,19 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     marginLeft: 20,
+    marginTop: 10,
   },
   pieContainer: {
     flex: 1,
     flexDirection: 'row',
-    padding: 10,
+    padding: 0,
 
   },
   pieTextContainer: {
     flex: 1,
     flexDirection: 'column',
-    padding: 10,
+    marginTop: 15,
+    padding: 20,
   },
 
 });
