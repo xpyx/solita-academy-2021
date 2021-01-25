@@ -2,7 +2,8 @@ This application is a solution for Solita's Dev Akatemia entrance examination [e
 
 If the link is not working anymore, here is the definition:
 
-    Your task is to implement a name application. The application should have an user interface. The user interface can be either a web application or an api. (It can even contain both if you have enough time and enthusiasm.)
+    Your task is to implement a name application. The application should have an user interface.
+    The user interface can be either a web application or an api. (It can even contain both if you have enough time and enthusiasm.)
 
     The user interface should provide at least the first one of the following requirements, but again, you’re allowed to implement them all.
 
@@ -11,7 +12,8 @@ If the link is not working anymore, here is the definition:
     - Return the total amount of all the names
     - Return the amount of the name given as a parameter
     
-    The data for the application is stored in a json file (names.json). The material contains the top-10 of both male and female names in Solita. You can use the json file directly as your data source or you can store the data in a database if you wish.
+    The data for the application is stored in a json file (names.json). The material contains
+    the top-10 of both male and female names in Solita. You can use the json file directly as your data source or you can store the data in a database if you wish.
 
 I didn't have time to implement the fourth requirement, but I am pretty pleased how the app came together.
 
