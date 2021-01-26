@@ -31,6 +31,7 @@ I didn't have time to implement the fourth requirement, but I am pretty pleased 
 
 ## PREREQUISITES:
 
+- [Docker](https://www.docker.com/products/docker-desktop)
 - [XCode](https://developer.apple.com/xcode/) for the iOS simulator
 - [Expo](https://github.com/expo/expo-cli) for running the Expo server for the frontend
 
